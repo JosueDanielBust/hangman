@@ -1,11 +1,13 @@
 extends layout
 
 block content
-  .main(ng-app="looser")
+  .main#looser(ng-app="looser")
     .content(ng-controller="LooserController")
       h1 We have a looser :(
-      h2 {{player}}, we know that you make the impossible for win
-    a(href="/"): p Try again!!
+      h2 
+        span {{player}}, 
+        | we know that you make the impossible for win
+      a(href="/"): p Try again!
 
   script(type="text/javascript" src="/js/cookies.js")
   script(type="text/javascript" src="/js/angular.min.js")

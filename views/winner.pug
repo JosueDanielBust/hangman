@@ -1,11 +1,13 @@
 extends layout
 
 block content
-  .main(ng-app="winner")
+  .main#winner(ng-app="winner")
     .content(ng-controller="WinnerController")
       h1 We have a winner!
-      h2 {{player}} is the new Conqueror!
-    a(href="/"): p Play again!
+      h2
+        span {{player}} 
+        | is the new Conqueror!
+      a(href="/"): p Play again!
 
   script(type="text/javascript" src="/js/cookies.js")
   script(type="text/javascript" src="/js/angular.min.js")

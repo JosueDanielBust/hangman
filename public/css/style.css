@@ -1,0 +1,92 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: rgb(43, 62, 78);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+.main {
+	margin: auto;
+	max-height: 60%;
+	max-width: 40%;
+	position: absolute;
+	text-align: center;
+	top: 0; bottom: 0; left: 0; right: 0;
+}
+form {
+	margin: 2rem 0;
+}
+form .row .input-field label {
+	font-weight: bold;
+	padding: 0 1rem;
+}
+form .row .input-field input {
+	border-radius: 5px;
+	border: 1px solid rgb(215, 218, 219);
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+form .row .input-field p {
+	color: rgb(103, 189, 216);
+	font-size: 0.9rem;
+	margin-top: 0.3rem;
+}
+.main#winner .content a p,
+.main#looser .content a p,
+form .row .input-field button {
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	border: 1px solid rgb(215, 218, 219);
+	font-size: 1rem;
+	margin-top: 1rem;
+	padding: 0.7rem 5rem;
+}
+.main .content #word {
+	letter-spacing: 1rem;
+	font-size: 3rem;
+	margin: 1.2rem;
+	color: rgb(255, 64, 77);
+}
+.main#winner .content a,
+.main#looser .content a {
+	text-decoration: none;
+}
+.main#winner .content a p,
+.main#looser .content a p {
+	color: rgb(43, 62, 78);
+	margin: 2.5rem auto 0;
+	width: 20%;
+}
+.main#winner .content h2 span,
+.main#looser .content h2 span {
+	color: rgb(103, 189, 216);
+}
+.main#looser .content h1 span {
+	color: rgb(255, 64, 77);
+	text-shadow: 1px 1px 2px rgb(43, 62, 78);
+}
+
+// Pseudo actions
+.main#winner .content a p:hover,
+.main#winner .content a p:focus,
+.main#winner .content a p:active,
+.main#looser .content a p:hover,
+.main#looser .content a p:focus,
+.main#looser .content a p:active,
+form .row .input-field button:hover,
+form .row .input-field button:focus,
+form .row .input-field button:active {
+	background-color: rgb(215, 218, 219);
+	border: 1px solid rgb(43, 62, 78);
+	cursor: pointer;
+}
