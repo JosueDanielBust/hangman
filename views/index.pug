@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .content
+    h1 Enter player name
+    form(action="/round" method="post")
+      .row
+        .input-field
+          label(for="player") Player
+          input(type="text" name="player" id="player" required="required")
+      .row
+        .input-field
+          button.btn Start
