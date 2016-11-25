@@ -4,6 +4,9 @@
 let express = require('express');
 let path = require('path');
 let app = express();
+let cookieParser = require('cookie-parser');
+let bodyParser = require('body-parser');
+let cookieSession = require('cookie-session');
 let firebase = require('firebase');
 
 // Firebase
@@ -21,12 +24,12 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // Middlewares
-app.configure(function() {
-    app.use(express.logger('dev'));
-    app.use(express.bodyParser());
-    app.use(express.cookieParser());
-    app.use(express.static(path.join(__dirname, 'public')));
-});
+app.use(express.logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(cookieParser());
+app.use(cookieSession({secret: 'app_1'}));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.get('/', function(req, res) {

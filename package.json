@@ -11,9 +11,16 @@
     "tests",
     "game"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosueDanielBust/hangman"
+  },
   "author": "JosueDanielBust",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.2",
     "express": "3.x",
     "firebase": "^3.6.1",
     "pug": "^2.0.0-beta6"
