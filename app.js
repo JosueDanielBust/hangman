@@ -37,6 +37,9 @@ app.get('/', function(req, res) {
 app.get('/winner', function(req, res) {
 	res.render('winner');
 });
+app.get('/looser', function(req, res) {
+	res.render('looser');
+});
 app.get('/add',function(req, res) {
 	res.render('addWord');
 });

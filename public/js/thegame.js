@@ -70,17 +70,7 @@ function unhideLetter(array, word, indexes, letter) {
   return array;
 }
 
-function haveWinner() {
-  console.log('we have a winner');
-  window.location = "/winner";
-}
-
-function haveLooser() {
-  console.log('we have a looser');
-  eraseCookie('player');
-  eraseCookie('words');
-  window.location = "/looser";
-}
+function redirectTo(path) { window.location = path; }
 
 // Turns
 function turn(letter) {
@@ -99,8 +89,8 @@ function turn(letter) {
     game.resetMovesLeft();
   }
 
-  if (game.round > 2) {haveWinner()};
-  if (game.movesLeft <= 0) {haveLooser()};
+  if (game.round > 2) {redirectTo('/winner')};
+  if (game.movesLeft <= 0) {redirectTo('/looser')};
 
   return hiddenWords;
 }
