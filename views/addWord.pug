@@ -5,12 +5,11 @@ block content
     h1 Add a new word
     if (added === true)
       p.created Word added
-    else
-      form(action="/add" method="post")
-        .row
-          .input-field
-            label(for="word") Word
-            input(type="text" name="word" id="word" required="required")
-        .row
-          .input-field
-            button.btn Save
+    form(action="/add" method="post")
+      .row
+        .input-field
+          label(for="word") Word
+          input(type="text" name="word" id="word" required="required")
+      .row
+        .input-field
+          button.btn Save

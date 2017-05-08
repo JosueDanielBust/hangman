@@ -19,5 +19,4 @@ Install the package dependencies using `npm install`
 Run using `npm start`
 
 ## What next?
-* Non `tilde` chars on words
 * Move firebase keys to environment vars

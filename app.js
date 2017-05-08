@@ -8,6 +8,7 @@ let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 let cookieSession = require('cookie-session');
 let firebase = require('firebase');
+let transliterator = require('transliterator');
 
 // Firebase
 let config = {
@@ -47,10 +48,10 @@ app.get('/add',function(req, res) {
 	res.render('addWord');
 });
 app.post('/add', function(req, res) {
-	let word	=	req.body.word;
+	let word		= transliterator(req.body.word).toLowerCase().replace(/[^\w\s]/gi, '');
 	let snap, total = 0;
 
-	firebase.database().ref('words').on('value', function(snapshot) {
+	firebase.database().ref('words').once('value', function(snapshot) {
 		snap = snapshot.val();
 		total = Object.keys(snap).length;
 		total++;
